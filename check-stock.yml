@@ -1,0 +1,38 @@
+name: Check wine stock
+
+on:
+  schedule:
+    # Toutes les 6 heures
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}  # permet de lancer manuellement depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run watcher
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python watcher.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "wine-stock-bot"
+          git config user.email "actions@github.com"
+          git add state.json
+          git diff --quiet --cached || git commit -m "Update stock state [skip ci]"
+          git push
