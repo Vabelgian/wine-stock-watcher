@@ -22,5 +22,23 @@
     "url": "https://peak-wines.com/products/terlan-v-2025?_pos=1&_fid=13d9075e7&_ss=c",
     "status": "Unknown",
     "price": "24.45"
+  },
+  "Barbera d'Alba Il Cerreto 2021": {
+    "name": "Barbera d'Alba Il Cerreto 2021",
+    "url": "https://peak-wines.com/products/robertovoerzio-ilceretto-2021?_pos=6&_fid=411042c12&_ss=c",
+    "status": "Unknown",
+    "price": "32.74"
+  },
+  "Catena Zapata Chardonnay Historic Rows 2022": {
+    "name": "Catena Zapata Chardonnay Historic Rows 2022",
+    "url": "https://peak-wines.com/products/catenazapata-historicrows-chardonnay-2022?_pos=7&_fid=fd56e81bf&_ss=c",
+    "status": "Unknown",
+    "price": "29.86"
+  },
+  "Dominio de Pingus PSI 2023": {
+    "name": "Dominio de Pingus PSI 2023",
+    "url": "https://peak-wines.com/products/psi-2023?_pos=3&_fid=f33c0c246&_ss=c",
+    "status": "Unknown",
+    "price": "38.10"
   }
 }
