@@ -75,8 +75,15 @@ def load_config() -> list:
 
 def load_state() -> dict:
     if STATE_PATH.exists():
-        with open(STATE_PATH, encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(STATE_PATH, encoding="utf-8") as f:
+                return json.load(f)
+        except json.JSONDecodeError as exc:
+            # state.json corrompu (ex : édité à la main avec une virgule en trop).
+            # On repart d'un état vide plutôt que de tout faire planter :
+            # aucune fausse alerte, l'état se reconstruit tout seul au prochain passage.
+            print(f"[ATTENTION] state.json illisible ({exc}) : on repart d'un état vide.", file=sys.stderr)
+            return {}
     return {}
 
 
