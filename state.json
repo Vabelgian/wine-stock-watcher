@@ -46,5 +46,17 @@
     "url": "https://peak-wines.com/products/jeremy_recchione_hautes_cotes_de_nuits_rouge_2023?_pos=6&_fid=ea71e511d&_ss=c",
     "status": "Unknown",
     "price": "50.12"
+  },
+  "Massolino Dolcetto d’Alba 2024": {
+    "name": "Massolino Dolcetto d’Alba 2024",
+    "url": "https://peak-wines.com/products/massolino-dolcetto-2024",
+    "status": "Unknown",
+    "price": "15.74"
+  },
+  "Massolino Barbera d’Alba 2025": {
+    "name": "Massolino Barbera d’Alba 2025",
+    "url": "https://peak-wines.com/products/barbera-d-alba-2025",
+    "status": "Unknown",
+    "price": "19.86"
   }
 }
